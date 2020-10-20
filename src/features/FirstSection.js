@@ -6,19 +6,21 @@ import { Down, Up, Github, Linkedin } from 'grommet-icons';
 export const FirstSection = () => {
     const [open, setOpen] = React.useState(false);
     const [section, setSection] = React.useState("second-section");
-    const [fill, setFill] = React.useState("vertical");
+    const [fill, setFill] = React.useState(true);
   
 
     const upOrDown = () => {
         if(open) {
             return (
                 <Up
+                    size="large"
                     color="grey"
                 />
             )
         } else {
             return (
                 <Down
+                    size="large"
                     color="grey"
                 />
             )
@@ -30,14 +32,15 @@ export const FirstSection = () => {
         if(open){
             setOpen(false);
             setSection("#first-section");
-            setFill("vertical");
+            setFill(true);
             
         } else {   
             setOpen(true);
+            // second section anchor not working
             setSection("#second-section");
-            setFill("");
+            setFill(false);
         }
-    }
+    } 
 
 
     return (
@@ -46,9 +49,8 @@ export const FirstSection = () => {
             id="first-section"
             fill={fill}
             background="light-2"
-            animation={{ type: 'fadeIn', duration: 1000 }}
+            animation={{ type: 'fadeIn', duration: 1500 }}
             align="center"
-            direction="column"
         >
             <Box
                 height="4vh"
@@ -177,7 +179,7 @@ export const FirstSection = () => {
                                         color: '#DB7F1F',
                                     }]}
                                     aria-label="meter"
-                                    round='full'
+                                    round={true}
                                     background="#D6D6D6"
                                 />
                             </Box>
@@ -200,7 +202,7 @@ export const FirstSection = () => {
                                         color: '#DB7F1F',
                                     }]}
                                     aria-label="meter"
-                                    round='full'
+                                    round={true}
                                     background="#D6D6D6"
                                 />
                            </Box>
@@ -223,7 +225,7 @@ export const FirstSection = () => {
                                         color: '#DB7F1F',
                                     }]}
                                     aria-label="meter"
-                                    round='full'
+                                    round={true}
                                     background="#D6D6D6"
                                 />
                             </Box>
@@ -246,7 +248,7 @@ export const FirstSection = () => {
                                         color: '#DB7F1F',
                                     }]}
                                     aria-label="meter"
-                                    round='full'
+                                    round={true}
                                     background="#D6D6D6"
                                 />
                             </Box>
@@ -256,8 +258,9 @@ export const FirstSection = () => {
             </Box>
             <Box
                 className="footer-box"
-                fill="horizontal"
-               
+                fill={true}
+                justify="end" 
+                align="center"               
             >
                 <Box
                     fill="horizontal"
@@ -285,25 +288,30 @@ export const FirstSection = () => {
                 </Box>
                 <Box
                 className="drop-down"
-                fill="vertical"
+                fill="horizontal"
                 align="center"
-                justify="end"
-            >
-                <Button
-                    href={section} 
-                    plain="false"
-                    size="large"
-                    onClick={() => isOpen()}
+                justify="center"
                 >
-                    {upOrDown}
+                    <Button
+                        href={section} 
+                        plain={true}
+                        size="large"
+                        onClick={() => isOpen()}
+                    >
+                        {upOrDown}
 
-                    </Button>
-                <Collapsible 
-                    open={open}
-                >    
-                    <SecondSection />
-                </Collapsible>  
-            </Box>
+                        </Button>
+                    <Box
+                        fill={true}
+                    >
+                    
+                        <Collapsible 
+                            open={open}
+                        >    
+                            <SecondSection />
+                        </Collapsible>  
+                    </Box>
+                </Box>
             </Box>
             
         </Box>

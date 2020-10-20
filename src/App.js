@@ -1,5 +1,5 @@
 import React from 'react';
-import { Avatar, Box, Grommet } from 'grommet';
+import { Grommet } from 'grommet';
 
 /**
  * Exemple de composant importé d'un autre fichier
@@ -28,7 +28,7 @@ const theme = {
 
 function App() {
   return (
-    <Grommet theme={theme} full="true">
+    <Grommet theme={theme} full>
 
       <FirstSection />
       

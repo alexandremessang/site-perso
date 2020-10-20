@@ -1,15 +1,17 @@
 import React from 'react';
-import { Box, Avatar, Text, Grid, Image, Button, Meter, Anchor } from 'grommet';
-import { Down, Github, Linkedin } from 'grommet-icons';
+import { Box, Avatar, Text } from 'grommet';
+
 
 export const SecondSection = () => {
+
+    
+
     return (
         <Box 
+            flex
             background="light-1"
             fill="horizontal"
-            id="second-section"
-            gap="xlarge"
-            
+            id="#second-section"            
         >
             <Box/>
            <Text>
@@ -42,7 +44,8 @@ export const SecondSection = () => {
                     src="img/moi.png"
                     size="300px"
                 />
-            </Box><Box
+            </Box>
+            <Box
                 className="Left-box"
                 gridArea="left"
                 align="center"
