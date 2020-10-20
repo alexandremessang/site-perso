@@ -1,12 +1,13 @@
 import React from 'react';
-import { Box, Grommet } from 'grommet';
+import { Avatar, Box, Grommet } from 'grommet';
 
-import { Counter } from './features/counter/Counter';
 /**
  * Exemple de composant importé d'un autre fichier
  * 
  * import { NewComp } from './features/NewComp';
  */
+
+ import { FirstSection } from './features/FirstSection';
 
 
 
@@ -18,27 +19,22 @@ const theme = {
       height: '20px',
     },
   },
+  avatar: {
+    extend: `border: 1px solid #DB7F1F; 
+            box-shadow: 2px 2px 15px 1px #DB7F1F;`,
+  },
 };
 
-const AppBar = (props) => (
-  <Box
-    tag='header'
-    direction='row'
-    align='center'
-    justify='between'
-    background='brand'
-    pad={{ left: 'medium', right: 'small', vertical: 'small' }}
-    elevation='medium'
-    style={{ zIndex: '1' }}
-    {...props}
-    />
-  );
 
 function App() {
   return (
-    <Grommet theme={theme}>
-      <AppBar>Hello Grommet!</AppBar>
-      <Counter />
+    <Grommet theme={theme} full="true">
+
+      <FirstSection />
+      
+      
+
+
     </Grommet>
   );
 }
