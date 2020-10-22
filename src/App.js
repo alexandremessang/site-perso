@@ -23,6 +23,10 @@ const theme = {
     extend: `border: 1px solid #DB7F1F; 
             box-shadow: 2px 2px 15px 1px #DB7F1F;`,
   },
+  collapsible: {
+    minSpeed: 1000,
+    baseline: 900
+  }
 };
 
 
