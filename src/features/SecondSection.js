@@ -1,5 +1,5 @@
 import React from 'react';
-import { Box, Avatar, Heading } from 'grommet';
+import { Box, Avatar, Heading, Text, Card, CardBody } from 'grommet';
 import ScrollAnimation from 'react-animate-on-scroll';
 
 
@@ -15,72 +15,42 @@ export const SecondSection = () => {
             id="#second-section"           
         >
             <Box 
-                basis="small" 
+                basis="xsmall" 
             />
             <Box
                 justify="center"
                 align="center"
+                gap="small"
             >
-                <ScrollAnimation animateIn='fadeIn'>
-                <Heading >
-                {"A propos de moi"}
-            </Heading>
-        </ScrollAnimation>
-            
+                <Heading
+                    color="#DB7F1F"
+                >
+                    {"A propos de moi"}
+                </Heading>
+                <Box
+                
+                >
+                    <Card>
+                    <CardBody 
+                        pad="medium"
+                        background="light-1"
+                    >
+                        <Text
+                            textAlign="justify"
+                        >
+                            {"J'étudie l'informatique depuis maintenant quatre ans. Au long de mon cursus, j'ai appris le développement web et logiciel ainsi que la conception et programmation orientée objet. "}
+                        </Text>
+                        <Text
+                            textAlign="justify"
+                        >
+                            {"J'ai récemment étendu mon domaine de compétences lors de mon année de DUETI en Ecosse à Aberdeen où j'y ai acquis des compétences en photo et vidéo montage ainsi qu'en modélisation et animation 3D."}
+                        </Text>
+                    </CardBody>
+                    </Card>
+                </Box>
            </Box>
             
-           <Box
-                className="Left-box"
-                gridArea="left"
-                align="center"
-                justify="center"
-                fill="horizontal"
-            >
-                <Avatar
-                    className="Avatar-img"
-                    background="accent-2" 
-                    src="img/moi.png"
-                    size="300px"
-                />
-            </Box>
-            <Box
-                className="Left-box"
-                gridArea="left"
-                align="center"
-                justify="center"
-            >
-                <Avatar
-                    className="Avatar-img"
-                    background="accent-2" 
-                    src="img/moi.png"
-                    size="300px"
-                />
-            </Box>
-            <Box
-                className="Left-box"
-                gridArea="left"
-                align="center"
-                justify="center"
-            >
-                <Avatar
-                    className="Avatar-img"
-                    background="accent-2" 
-                    src="img/moi.png"
-                    size="300px"
-                />
-            </Box><Box
-                className="Left-box"
-                gridArea="left"
-                align="center"
-                justify="center"
-            >
-                <Avatar
-                    className="Avatar-img"
-                    background="accent-2" 
-                    src="img/moi.png"
-                    size="300px"
-                />
-            </Box>
+           
 
         </Box>
         

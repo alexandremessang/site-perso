@@ -26,7 +26,8 @@ const theme = {
   collapsible: {
     minSpeed: 1000,
     baseline: 900
-  }
+  },
+
 };
 
 
