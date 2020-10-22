@@ -27,6 +27,19 @@ const theme = {
     minSpeed: 1000,
     baseline: 900
   },
+  carousel: {
+    animation: {
+      duration: 400,
+    },
+    icons: {
+      color: '#DB7F1F',
+    },
+    disabled: {
+      icons: {
+        color: 'grey',
+      },
+    },
+  },
 
 };
 
