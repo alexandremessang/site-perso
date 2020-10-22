@@ -62,7 +62,7 @@ export const FirstSection = () => {
                 height="xsmall"
                 elevation="medium"
                 background="light-3"
-                style={{position: 'fixed'}}
+                style={{position: 'fixed', zIndex: 100 }}
             >
                 <Text
                     size="3em"

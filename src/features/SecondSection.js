@@ -1,7 +1,5 @@
 import React from 'react';
-import { Box, Heading, Text, Card, CardBody, Carousel, Image, Button } from 'grommet';
-import ScrollAnimation from 'react-animate-on-scroll';
-import { Link } from 'grommet-icons';
+import { Box, Heading, Text, Card, CardBody, Image, Carousel } from 'grommet';
 
 
 export const SecondSection = () => {
@@ -70,22 +68,83 @@ export const SecondSection = () => {
             >
                 <Carousel 
                     fill
-                    controls="arrows"
                     play={5000}
                 >   
-                    <Image 
-                        fit="cover" 
-                        src="img/OSEV.png" 
-                    />
-                    <Image fit="cover" src="//v2.grommet.io/assets/IMG_4245.jpg" />
-                    <Image fit="cover" src="//v2.grommet.io/assets/IMG_4210.jpg" />
+                    <Box 
+                        as="a" 
+                        target="__blank" 
+                        fill={true}
+                        href="https://osev-mb.ext.carsat-mp.fr/" 
+                        style={{zIndex: 99, textDecoration: "none"}}
+                    >
+                        <Text as="p"
+                            size="large"
+                            textAlign="center"
+                            color="black"
+                        >
+                            {"Projet tutoré pour le compte de la Carsat MP"}
+                        </Text>
+                        <Image 
+                            fit="cover" 
+                            src="img/OSEV.png" 
+                        />
+                        
+                    </Box>
+                    <Box 
+                        as="a" 
+                        target="__blank" 
+                        style={{zIndex: 99, textDecoration: "none"}}
+                        width="full"
+                    >
+                        <Text as="p"
+                            size="large"
+                            textAlign="center"
+                            color="black"
+                        >
+                            {"Chambre d'hôtel sous l'eau en 3D"}
+                        </Text>
+                        <Image 
+                            fit="cover" 
+                            src="img/3D.png" 
+                        />
+                        
+                    </Box>
+                    <Box 
+                        as="a" 
+                        target="__blank" 
+                        style={{zIndex: 99, textDecoration: "none"}}
+                    >
+                        <Text as="p"
+                            size="large"
+                            textAlign="center"
+                            color="black"
+                        >
+                            {"Stage Laravel plateforme DPO pour le compte d'Altij"}
+                        </Text>
+                        <Image 
+                            fit="cover" 
+                            src="img/DPO.png" 
+                        />
+                        
+                    </Box>
                 </Carousel>
             </Box>
             <Box 
                 basis="small" 
             />
-           
-
+            <Box
+                height="small"
+            >
+                <Heading
+                    textAlign="center"
+                    color="#DB7F1F"
+                >
+                    {"Mes compétences"}
+                </Heading>
+            </Box>
+            <Box 
+                basis="xsmall" 
+            />
         </Box>
         
 
