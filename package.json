@@ -10,6 +10,7 @@
     "grommet": "^2.15.2",
     "grommet-icons": "^4.5.0",
     "react": "^16.14.0",
+    "react-animate-on-scroll": "^2.1.5",
     "react-dom": "^16.14.0",
     "react-redux": "^7.2.1",
     "react-router-dom": "^5.2.0",

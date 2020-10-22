@@ -5,8 +5,9 @@ import { Down, Up, Github, Linkedin } from 'grommet-icons';
 
 export const FirstSection = () => {
     const [open, setOpen] = React.useState(false);
-    const [section, setSection] = React.useState("second-section");
+    const [section, setSection] = React.useState("#first-section");
     const [fill, setFill] = React.useState(true);
+
   
 
     const upOrDown = () => {
@@ -28,16 +29,14 @@ export const FirstSection = () => {
     }
 
     const isOpen = () => {
-        console.log(section)
         if(open){
             setOpen(false);
-            setSection("#first-section");
             setFill(true);
-            
+            setSection("#second-section");            
         } else {   
             setOpen(true);
             // second section anchor not working
-            setSection("#second-section");
+            setSection("#first-section");
             setFill(false);
         }
     } 
@@ -46,22 +45,24 @@ export const FirstSection = () => {
     return (
         <Box
             className="content-box"
-            id="first-section"
+            id="#first-section"
             fill={fill}
             background="light-2"
             animation={{ type: 'fadeIn', duration: 1500 }}
             align="center"
+            basis="full"
         >
-            <Box
-                height="4vh"
-            />
             <Box
                 className="header-box"
                 direction="row"
                 gap="xlarge"
                 fill="horizontal"
                 justify="center"
-                align="start"
+                align="center"
+                height="xsmall"
+                elevation="medium"
+                background="light-3"
+                style={{position: 'fixed'}}
             >
                 <Text
                     size="3em"
@@ -69,7 +70,7 @@ export const FirstSection = () => {
                     {"Alexandre"}
                 </Text>
                 <Text
-                size="2.9em"
+                    size="2.9em"
                     weight="bold"
                     color="#DB7F1F"
                 >
@@ -77,7 +78,7 @@ export const FirstSection = () => {
                 </Text>
             </Box>
             <Box
-                height="xsmall"
+                height="small"
             />
             <Box
                 fill="horizontal"
@@ -88,8 +89,8 @@ export const FirstSection = () => {
                     fill="horizontal"
                     rows={['medium']}
                     columns={[
-                        '2/4',
-                        '2/4'
+                        '1/4',
+                        '3/4'
                     ]}
                     areas={[[
                         'left',
@@ -139,6 +140,7 @@ export const FirstSection = () => {
                         <Grid
                             className="Grid-skills"
                             fill="horizontal"
+                            justify="center"
                             rows={[
                                 'xsmall',
                                 'xsmall',
@@ -258,7 +260,7 @@ export const FirstSection = () => {
             </Box>
             <Box
                 className="footer-box"
-                fill={true}
+                fill="horizontal"
                 justify="end" 
                 align="center"               
             >
@@ -304,12 +306,11 @@ export const FirstSection = () => {
                     <Box
                         fill={true}
                     >
-                    
                         <Collapsible 
                             open={open}
-                        >    
+                        >
                             <SecondSection />
-                        </Collapsible>  
+                        </Collapsible>
                     </Box>
                 </Box>
             </Box>

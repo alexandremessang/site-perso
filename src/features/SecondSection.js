@@ -1,5 +1,6 @@
 import React from 'react';
-import { Box, Avatar, Text } from 'grommet';
+import { Box, Avatar, Heading } from 'grommet';
+import ScrollAnimation from 'react-animate-on-scroll';
 
 
 export const SecondSection = () => {
@@ -9,14 +10,24 @@ export const SecondSection = () => {
     return (
         <Box 
             flex
-            background="light-1"
+            background="light-2"
             fill="horizontal"
-            id="#second-section"            
+            id="#second-section"           
         >
-            <Box/>
-           <Text>
-               {"Hello"}
-           </Text>
+            <Box 
+                basis="small" 
+            />
+            <Box
+                justify="center"
+                align="center"
+            >
+                <ScrollAnimation animateIn='fadeIn'>
+                <Heading >
+                {"A propos de moi"}
+            </Heading>
+        </ScrollAnimation>
+            
+           </Box>
             
            <Box
                 className="Left-box"

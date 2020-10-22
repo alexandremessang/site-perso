@@ -31,8 +31,6 @@ function App() {
     <Grommet theme={theme} full>
 
       <FirstSection />
-      
-      
 
 
     </Grommet>
