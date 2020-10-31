@@ -1,7 +1,8 @@
 import React from 'react';
-import { Box, Heading, Text, Image } from 'grommet';
+import { Box} from 'grommet';
 import { AboutMe } from './AboutMe';
 import { Experience } from './Experience';
+import { Skills } from './Skills';
 
 
 export const SecondSection = () => {
@@ -26,108 +27,7 @@ export const SecondSection = () => {
             <Box 
                 basis="small" 
             />
-            <Box
-                height="small"
-            >
-                <Heading
-                    textAlign="center"
-                    color="#DB7F1F"
-                >
-                    {"Mes compétences"}
-                </Heading>
-            </Box>
-            <Box 
-                basis="xsmall" 
-            />
-            <Box
-                direction="row-responsive"
-                responsive={true}
-                gap="large"
-            >
-                <Box
-                    direction="column"
-                    gap="xsmall"
-                >
-                    <Image
-                        className="html-img"
-                        background="accent-2" 
-                        src="img/html.png"
-                        size="256px"
-                        fit="contain"
-                    /> 
-                    <Text
-                        textAlign="center"
-                    >
-                        {"HTML5"}
-                    </Text>
-                </Box>
-                <Box />
-                <Box
-                    gap="xsmall"
-                > 
-                    <Image
-                        className="css-img"
-                        background="accent-2" 
-                        src="img/css.png"
-                        fit="contain"
-                        size="256px"
-                    /> 
-                    <Text
-                        textAlign="center"
-                    >
-                        {"CSS3"}
-                    </Text>
-                </Box>
-                <Box />
-                <Box
-                    gap="xsmall"
-                >
-                    <Image
-                        className="javascript-img"
-                        background="accent-2" 
-                        src="img/javascript.png"
-                        size="256px"
-                        fit="contain"
-                    /> 
-                    <Text
-                        textAlign="center"
-                    >
-                        {"JavaScript"}
-                    </Text>
-                </Box>
-                <Box />
-                <Box
-                    gap="xsmall"
-                >
-                    <Image
-                        className="php-img"
-                        background="accent-2" 
-                        src="img/php.png"
-                        size="256px"
-                    /> 
-                    <Text
-                        textAlign="center"
-                    >
-                        {"PHP"}
-                    </Text>
-                </Box>
-                <Box />
-                <Box
-                    gap="xsmall"
-                >
-                    <Image
-                        className="react-img"
-                        background="accent-2" 
-                        src="img/react.png"
-                        size="256px"
-                    /> 
-                    <Text
-                        textAlign="center"
-                    >
-                        {"React Native"}
-                    </Text>
-                </Box>  
-            </Box>
+            <Skills />
 
 
 
