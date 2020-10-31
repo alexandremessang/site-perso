@@ -1,5 +1,5 @@
 import React from 'react';
-import { Box, Heading, Text, Card, CardBody, Image, Carousel, Meter, Avatar } from 'grommet';
+import { Box, Heading, Text, Card, CardBody, Image, Carousel } from 'grommet';
 
 
 export const SecondSection = () => {
