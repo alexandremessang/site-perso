@@ -81,7 +81,7 @@ export const Skills = () => {
                 >
                     <Image
                         className="php-img"
-                        background="accent-2" 
+                        background="accent-2"  
                         src="img/php.png"
                         size="256px"
                         fit="contain"
