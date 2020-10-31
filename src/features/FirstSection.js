@@ -6,9 +6,6 @@ import { Down, Up, Github, Linkedin } from 'grommet-icons';
 export const FirstSection = () => {
     const [open, setOpen] = React.useState(false);
     const [section, setSection] = React.useState("#first-section");
-    const [fill, setFill] = React.useState(true);
-
-  
 
     const upOrDown = () => {
         if(open) {
@@ -31,13 +28,12 @@ export const FirstSection = () => {
     const isOpen = () => {
         if(open){
             setOpen(false);
-            setFill(true);
             setSection("#second-section");            
         } else {   
             setOpen(true);
             // second section anchor not working
             setSection("#first-section");
-            setFill(false);
+         
         }
     } 
 
@@ -46,31 +42,28 @@ export const FirstSection = () => {
         <Box
             className="content-box"
             id="#first-section"
-            fill={fill}
             background="light-2"
             animation={{ type: 'fadeIn', duration: 1500 }}
             align="center"
-            basis="full"
         >
             <Box
                 className="header-box"
-                direction="row"
-                gap="xlarge"
                 fill="horizontal"
                 justify="center"
                 align="center"
-                height="xsmall"
+                gap="xsmall"
+                direction="row"
                 elevation="medium"
                 background="light-3"
                 style={{position: 'fixed', zIndex: 100 }}
             >
                 <Text
-                    size="3em"
+                    size="2em"
                 >
                     {"Alexandre"}
                 </Text>
                 <Text
-                    size="2.9em"
+                    size="1.9em"
                     weight="bold"
                     color="#DB7F1F"
                 >
@@ -78,28 +71,16 @@ export const FirstSection = () => {
                 </Text>
             </Box>
             <Box
-                height="small"
+                height="50px"
             />
             <Box
+                className="Main-box"
+                direction="row-responsive"
                 fill="horizontal"
-                pad="large"
             >
-                <Grid
-                    className="Grid-main"
-                    fill="horizontal"
-                    rows={['medium']}
-                    columns={[
-                        '1/4',
-                        '3/4'
-                    ]}
-                    areas={[[
-                        'left',
-                        'right'
-                    ]]}
-                >
                     <Box
                         className="Left-box"
-                        gridArea="left"
+                        fill="horizontal"
                         align="center"
                         justify="center"
                     >
@@ -107,16 +88,17 @@ export const FirstSection = () => {
                             className="Avatar-img"
                             background="accent-2" 
                             src="img/moi.png"
-                            size="300px"
+                            size="280px"
                         />
                     </Box>
 
                     <Box
                         className="Right-box"
-                        gridArea="right"
                         justify="center"
+                        fill="horizontal"
                         align="center"
                         gap="xlarge"
+                        pad="large"
                     >
                         <Box
                             direction="row"
@@ -256,18 +238,22 @@ export const FirstSection = () => {
                             </Box>
                         </Grid>
                     </Box>
-                </Grid>
+                
             </Box>
             <Box
-                className="footer-box"
+                as="footer"
+                className="Footer-box"
                 fill="horizontal"
+                basis="full"
+                height="auto"
                 justify="end" 
-                align="center"               
+                align="center"  
+                pad="large"             
             >
                 <Box
                     fill="horizontal"
                     gap="medium"
-                    pad="large"
+                    
                     align="start"
                     direction="row"
                 >

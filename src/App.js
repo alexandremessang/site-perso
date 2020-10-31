@@ -47,8 +47,8 @@ const theme = {
 function App() {
   return (
     <Grommet 
-      theme={theme} 
       full
+      theme={theme} 
     >
 
       <FirstSection />
