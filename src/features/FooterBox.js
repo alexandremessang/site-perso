@@ -28,11 +28,11 @@ export const FooterBox = () => {
     const isOpen = () => {
         if(open){
             setOpen(false);
-            setSection("#second-section");            
+            setSection("#first-section");            
         } else {   
             setOpen(true);
             // second section anchor not working
-            setSection("#first-section");
+            setSection("#second-section");            
          
         }
     } 

@@ -12,7 +12,7 @@ export const SecondSection = () => {
             flex
             background="light-2"
             fill="horizontal"
-            id="#second-section" 
+            id="second-section" 
             justify="center"
             align="center"          
         >

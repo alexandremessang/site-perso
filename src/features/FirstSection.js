@@ -10,10 +10,11 @@ export const FirstSection = () => {
     return (
         <Box
             className="content-box"
-            id="#first-section"
+            id="first-section"
             background="light-2"
             animation={{ type: 'fadeIn', duration: 1500 }}
             align="center"
+            style={{minHeight: "100vh"}}
         >
             <Box
                 className="header-box"
