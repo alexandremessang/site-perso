@@ -43,7 +43,7 @@ export const Experience = () => {
                         </Text>
                         <Image 
                             fit="cover" 
-                            src="img/OSEV.png" 
+                            src="img/OSEV.PNG" 
                         />
                         
                     </Box>
@@ -80,7 +80,7 @@ export const Experience = () => {
                         </Text>
                         <Image 
                             fit="cover" 
-                            src="img/DPO.png" 
+                            src="img/DPO.PNG" 
                         />
                         
                     </Box>
